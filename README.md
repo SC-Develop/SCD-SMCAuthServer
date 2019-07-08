@@ -49,6 +49,8 @@ NotAuthenticated => il controllo di validazione può essere eseguito solo dopo l
 
 - <b>Servertype:</b>restituisce "Integrated", "Standalone"
 
+## Flow Diagram
+
 <img src="diagram/Diagramma1.png" />
 
 ## Come comunicare col server per eseguire la procedura di autenticazione validazione e controllo</u>
