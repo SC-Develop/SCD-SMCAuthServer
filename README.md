@@ -49,7 +49,9 @@ NotAuthenticated => il controllo di validazione può essere eseguito solo dopo l
 
 - <b>Servertype:</b>restituisce "Integrated", "Standalone"
 
-Come comunicare col server per eseguire la procedura di autenticazione validazione e controllo</u>
+<img src="diagram/Diagramma1.png" />
+
+## Come comunicare col server per eseguire la procedura di autenticazione validazione e controllo</u>
 
 Si premette che la pagina web di login deve oltre i parametri quali username, password etc. deve contenere un ulteriore campo hidden che conterrà il codice ATR letto dalla Smart Card inserita nel lettore.
 
