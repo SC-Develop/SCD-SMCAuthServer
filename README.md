@@ -16,7 +16,7 @@ Il server accetta una serie di comandi per il rilevamento del codice carta, la g
 
 Il server inoltre restituisce delle stringhe di errore nel caso in cui la carta non è inserita nel lettore, o se nessun lettore Smart Card viene rilevato dal server.
 
-## Comandi Server:
+### Comandi Server:
 
 - Logincode: => richiede il codice ATR al server: il server risponde inviando il codice ATR. Dopo l'invio  di questo comando, i controlli di validazione falliranno: bisogna rieseguire il login , l'autenticazione e la validazione. Vedi comando successivo.
 ........................................................................................................................................................................................................
