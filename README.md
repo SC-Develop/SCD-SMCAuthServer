@@ -51,7 +51,9 @@ Also, the sever reply with an error string in case of the smart card is not dete
 
     - <b>AlreadyLogged</b> : not to need to autheticate: already logged in
 
-- <b>Checkcode:</b>=> verifica la presenza della Smart Card ed esegue il controllo di validazione.
+- <b>Checkcode:</b>
+
+  Detect smart card (if is it inserted into reader) and perform the validation check
 
   Return reply:
 
