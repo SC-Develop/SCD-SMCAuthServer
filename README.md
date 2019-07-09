@@ -29,7 +29,7 @@ The server accepts commands for:
 
 Also, the sever reply with an error string in case of the smart card is not detected  (is not inserted into reeader), or no readers is detected.
 
-### Comandi Server:
+### Server Commands:
 
 - <b>Logincode:</b>  
 
