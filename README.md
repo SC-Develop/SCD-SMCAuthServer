@@ -34,17 +34,19 @@ Also, the sever reply with an error string in case of the smart card is not dete
   After sending this command, the validation controls will fails: you will need to log in again, authenticate and validate.
   See next command.
   
-- <b>Authcode:ATR </b> => invia al server il codice ATR utilizzato per il login, se corrisponde al codice ATR della Smart Card inserita il login viene accettato, ed il codice ATR viene accettato e validato. Il server considererà valido il codice ATR validato in sede di autenticazione.
+- <b>Authcode:ATR </b>
 
+  Send to server the <b>ATR</b> code you have using for login, if match the <br>ATR</b> code of smart card currently inserted   into reader, the login authentication code is validated: the server store this code for next validation checking.
+  
   Return reply:
 
-    - error string: se la smart card non è inserita o il lettore non viene trovato,
+    - <b>error string</b>  : the smart card is not detected  (is not inserted into reeader), or no readers is detected.
 
-    - <b>Validated</b>:     => in caso di controllo di validazione positivo
+    - <b>Validated</b>     : validation success
 
-    - <b>Notvalidated</b>:  => Il codice ATR della Smart Card inserita non corrisponde al codice ATR validato
+    - <b>Notvalidated</b>  : the smart card <b>ATR</b> code do not match the <b>ATR</b> code validated
 
-    - <b>AlreadyLogged</b>: => Autenticazione già eseguita precedentemente
+    - <b>AlreadyLogged</b> : not to need to autheticate: already logged in
 .........................................................................................................................................................................................................
 
 - <b>Checkcode:</b>=> verifica la presenza della Smart Card ed esegue il controllo di validazione.
