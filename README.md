@@ -84,7 +84,16 @@ Also, the sever reply with an error string in case of the smart card is not dete
 
 ## Test the Server
 
+Download the project typing on your linux terminal
+
+```
+$ git clone https://github.com/sc-develop/scd_smcauthserver
+```
+Run Qt Creator, load the project file build and run the server.
+
 To test the Smart Card Autentication Server you can load the <b>atr.html</b> page on your browser. 
+Connect your smartcard  reader on USB connector of your PC/Laptop  and insert the smartcard into reader. 
+Now you can test the server by clicking the buttons on atr.html web page.
 
 ## How to use the server for authentication
 
