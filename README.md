@@ -82,7 +82,14 @@ Also, the sever reply with an error string in case of the smart card is not dete
 
 <img src="diagram/Diagramma1.png" />
 
+## Test the Server
+
+To test the Smart Card Autentication Server you can load the <b>atr.html</b> page on your browser. 
+
 ## How to use the server for authentication
+
+The typical use is authentication on a remote server such as, for example, a WEB portal.
+First you need to read the ATR code to associate with your user.
 
 Si premette che la pagina web di login deve oltre i parametri quali username, password etc. deve contenere un ulteriore campo hidden che conterrà il codice ATR letto dalla Smart Card inserita nel lettore.
 
