@@ -102,9 +102,11 @@ First you need to read the ATR code to associate with your user.
 You can get the <b>ATR</b> code by using the <b>atr.html</b> page how explained above 
 Now you can associate the <b>ATR</ b> code with the username and password of your user in the authentication table of the users of your database server
 
+```
  username : Tex
  password : Willer
  atr      : 3bff1800008131fe45006b05051017012101434e531031805e
+ ```
 
 The explanation of authentication on remote server by web page is beyond the scope of this document.
 
