@@ -95,7 +95,7 @@ To test the Smart Card Autentication Server you can load the <b>atr.html</b> pag
 Connect your smartcard  reader to the USB connector of your PC/Laptop  and insert the smartcard into the reader. 
 Now you can test the server by clicking the buttons on atr.html web page.
 
-## How to use the server for authentication
+## How to use the server for authentication and validation checking
 
 The typical use is authentication on a remote server such as, for example, a WEB portal.
 First you need to read the ATR code to associate with your user.
