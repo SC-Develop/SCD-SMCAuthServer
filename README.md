@@ -62,10 +62,11 @@ Also, the sever reply with an error string in case of the smart card is not dete
 
     - <b>Notvalidated</b>     : the smart card <b>ATR</b> code do not match the <b>ATR</b> code validated
 
-    - <b>NotAuthenticated</b> : currently not authenticated: must
+    - <b>NotAuthenticated</b> : currently not authenticated: you need to log in.
     
-    il controllo di validazione può essere eseguito solo dopo l'autenticazione e la validazione del codice ATR. Se l'applicazione WEB, nonostante sia correttamente autenticata, riceve questa risposta deve subito tornare alla pagina di login perchè potrebbe esserci un tentativo di forzare il server. Il controllo di validazione infatti si deve esegure solo dopo la validazione del codice ATR, cioè solo dopo che laì'applicaqzione si è correttamente autenticata. infatti non ha senso eseguire il controllo di validazione se l'applicazione non ha eseguito il login.
-..........................................................................................................................................................................................................
+The validation check shuld be performad oly after the authentication and validation od<b> ATR </b>code.
+If you receive the  Il controllo di validazione infatti si deve esegure solo dopo la validazione del codice ATR, cioè solo dopo che laì'applicaqzione si è correttamente autenticata. infatti non ha senso eseguire il controllo di validazione se l'applicazione non ha eseguito il login.
+
 
 - <b>Servertype:</b>restituisce "Integrated", "Standalone"
 
