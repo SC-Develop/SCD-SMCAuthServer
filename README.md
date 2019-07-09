@@ -3,6 +3,9 @@ Smart Card Authentication Server
 
 ## Description
 
+The SCD Smart Card Authentication Server allow you to read ATR code from your Smart Card and use it for login to remote web server or to acces to your own application. 
+You can Ask to Server to read ATR Code from smart Card and manage the authentication, to check the matching of current ATR code with the authenticated code, or to check if the smart card is inserted into you card reader.
+
 The authentication server can be work in two modality:
 
 - <b>standalone</b>
@@ -55,11 +58,11 @@ Also, the sever reply with an error string in case of the smart card is not dete
 
     - <b>error string</b>     : the smart card is not detected  (is not inserted into reeader), or no readers is detected.
 
-    - <b>Validated</b>        : in caso di controllo con esito positivo
+    - <b>Validated</b>        : authentication valid
 
-    - <b>Notvalidated</b>     : Il codice ATR della Smart Card inserita non corrisponde al codice ATR validato
+    - <b>Notvalidated</b>     : the smart card <b>ATR</b> code do not match the <b>ATR</b> code validated
 
-    - <b>NotAuthenticated</b> :
+    - <b>NotAuthenticated</b> : currently not authenticated: must
     
     il controllo di validazione può essere eseguito solo dopo l'autenticazione e la validazione del codice ATR. Se l'applicazione WEB, nonostante sia correttamente autenticata, riceve questa risposta deve subito tornare alla pagina di login perchè potrebbe esserci un tentativo di forzare il server. Il controllo di validazione infatti si deve esegure solo dopo la validazione del codice ATR, cioè solo dopo che laì'applicaqzione si è correttamente autenticata. infatti non ha senso eseguire il controllo di validazione se l'applicazione non ha eseguito il login.
 ..........................................................................................................................................................................................................
