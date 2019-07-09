@@ -13,10 +13,9 @@ Can be used with a web browser if , on login, an additional level of security is
 ## How to work
 
 When started, the server open the port 10552, and wait for web socket connection.
+Web socket client can connects to the server by the connection string: <b>"ws://localhost:10522"</b>.
 
-You can connect to server by the onenction string: <b>"ws://localhost:10522"</b>.
-
-This version of server supports only the unsecure conenction.
+This version of server supports only the unsecure connection.
 
 The server accept commands for:
 
