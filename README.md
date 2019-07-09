@@ -65,11 +65,16 @@ Also, the sever reply with an error string in case of the smart card is not dete
     
     - <b>SessionTimeout</b>   : you should to logout.
     
-The validation check should be performad only after the authentication and validation of<b>ATR</b>code. It makes no sense to check the validations if you are not logged in.
-If not validated or authenticated is safely and strictly  recomended to logout from your application andif need,  again log in. If thea are an error you con wait until <b>SessionTimeout</b> is issued. 
+  The validation check should be performad only after the authentication and validation of<b>ATR</b>code. It makes no sense     to check the validations if you are not logged in.
+  If not validated or authenticated is safely and strictly  recomended to logout from your application andif need,  again log   in. If thea are an error you con wait until <b>SessionTimeout</b> is issued. 
 
 
-- <b>Servertype:</b>restituisce "Integrated", "Standalone"
+- <b>Servertype:</b> 
+
+  Return reply:
+  
+    - <b>Integrated</b>
+    - <b>Standalone</b>
 
 ## Flow Diagram
 
