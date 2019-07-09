@@ -17,7 +17,7 @@ Web socket client can connects to the server by the connection string: <b>"ws://
 
 This version of server supports only the unsecure connection.
 
-The server accept commands for:
+The server accepts commands for:
 
 - smart card ATR code reading
 - management of authentication, 
