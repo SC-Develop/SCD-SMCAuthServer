@@ -119,10 +119,9 @@ The login web page should contain the <b>ATR</b> hidden field. This field will b
 1) The login web page ask to the server the ATR code by sending the command <b>"Logincode:"</b>, and set the ATR hidden field    with the readed ATR code.
 
 2) When the user submits the login,  the <b>ATR</b> code is sent to web server togheter  username and passwor for the            authentication. 
-   If the authentication succeeded (the ATR code match username and password) the command <b>Authcode:<ATR></b> will be sent    to the smart card server to validate the ATR code. 
+
+3) If the authentication succeeded (the ATR code match username and password) the command <b>Authcode:<ATR></b> will be sent    to the smart card server to validate the ATR code.
    if your ATR code is <b>3bff1800008131fe45006b05051017012101434e531031805e</b> the command sent to the server will be          <b>"Authcode:3bff1800008131fe45006b05051017012101434e531031805e"</b>. 
    If the validation fails you should to return to login page.
-Ad intervalli temporizzati, bisogna eseguire il controllo di validazione inviando il comando <b>"Checkcode:"</b> in caso di fallimento tornare al login, nel caso in cui per più di n-secondi non viene rilevata la smartcard od il lettore si torna al login.
-Il controllo temporizzato non è necessario se si utilizza il browser proprietario, poichè se ne occupa il browser stesso.
-
-Inoltre con il browser proprietario non è necessario controllare il valori restituiti da comando Authcode, poichè il browser stesso decide se disconnettersi o meno.
+  
+4) At temporized interval, or when nedeed, you may be check validation by sending to the server the command <b>"Checkcode:"</b> If validation fails, or if session expired you should login again.
