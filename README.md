@@ -1,16 +1,23 @@
 # SCD_SMCAuthServer
 Smart Card Authentication Server
 
-## SMART CARD - Gestione Autenticazione
-Il sistema di autenticazione con Smart Card può funzionare in due modalità:
+## Description
 
-Con browser generico: richiede installazione server di gestione Smart Card
-Con browser proprietario: utilizza il server interno al browser proprietario.
-Server di gestione SmartCard
+The authentication server can be work in two modality:
 
-Il server di gestione della smart card apre un websocket locale su porta 10522.
+- <b>standalone</b>
+- <b>embedded</b> on your application
 
-Stringa di connessione al server:  <b>"ws://localhost:10522"</b>
+Can be used with a web browser if , on login, an additional level of security is required or as security key for upu own application.
+Also, this server can be used embedding it on your own application.
+
+## How ro work
+
+When started, the server oepn the port 10552, and wait for web socket connection.
+
+You can connect to server by the onenction string: <b>"ws://localhost:10522"</b>.
+
+This version of server supports only the unsecure conenction.
 
 Il server accetta una serie di comandi per il rilevamento del codice carta, la gestione della transazione di autenticazione, e il controllo di congruenza/presenza della carta.
 
