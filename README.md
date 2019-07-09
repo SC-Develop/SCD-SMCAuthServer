@@ -59,11 +59,11 @@ Also, the sever reply with an error string in case of the smart card is not dete
 
     - <b>Validated</b>        : authentication valid
 
-    - <b>Notvalidated</b>     : the smart card <b>ATR</b> code do not match the <b>ATR</b> code validated
+    - <b>Notvalidated</b>     : the smart card <b>ATR</b> code do not match the <b>ATR</b> code validated, you should to                                     logout.
 
-    - <b>NotAuthenticated</b> : currently not authenticated: you need to log in.
+    - <b>NotAuthenticated</b> : currently not authenticated: you should to log in.
     
-    - <b>SessionTimeout</b>   : you shuold to logout.
+    - <b>SessionTimeout</b>   : you should to logout.
     
 The validation check should be performad only after the authentication and validation of<b>ATR</b>code. It makes no sense to check the validations if you are not logged in.
 If not validated or authenticated is safely and strictly  recomended to logout from your application andif need,  again log in. If thea are an error you con wait until <b>SessionTimeout</b> is issued. 
