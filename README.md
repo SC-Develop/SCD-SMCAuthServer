@@ -21,7 +21,7 @@ Il server inoltre restituisce delle stringhe di errore nel caso in cui la carta 
 - <b>Logincode:</b>=> richiede il codice ATR al server: il server risponde inviando il codice ATR. Dopo l'invio  di questo comando, i controlli di validazione falliranno: bisogna rieseguire il login , l'autenticazione e la validazione. Vedi comando successivo.
 ........................................................................................................................................................................................................
 
-- <b>Authcode:ATR </b>=> invia al server il codice ATR utilizzato per il login, se corrisponde al codice ATR della Smart Card inserita il login viene accettato, ed il codice ATR viene accettato e validato. Il server considererà valido il codice ATR validato in sede di autenticazione.
+- <b>Authcode:<ATR> </b>=> invia al server il codice ATR utilizzato per il login, se corrisponde al codice ATR della Smart Card inserita il login viene accettato, ed il codice ATR viene accettato e validato. Il server considererà valido il codice ATR validato in sede di autenticazione.
 
 Restituisce:
 
