@@ -18,20 +18,20 @@ Il server inoltre restituisce delle stringhe di errore nel caso in cui la carta 
 
 ### Comandi Server:
 
-- <b>Logincode:</b>=> richiede il codice ATR al server: il server risponde inviando il codice ATR. Dopo l'invio  di questo comando, i controlli di validazione falliranno: bisogna rieseguire il login , l'autenticazione e la validazione. Vedi comando successivo.
-........................................................................................................................................................................................................
+- <b>Logincode:</b> => richiede il codice <b>ATR</b> al server: il server risponde inviando il codice <b>ATR</b>.
+Dopo l'invio  di questo comando, i controlli di validazione falliranno: bisogna rieseguire il login, l'autenticazione e la validazione. Vedi comando successivo.
 
-- <b>Authcode:<ATR> </b>=> invia al server il codice ATR utilizzato per il login, se corrisponde al codice ATR della Smart Card inserita il login viene accettato, ed il codice ATR viene accettato e validato. Il server considererà valido il codice ATR validato in sede di autenticazione.
+- <b>Authcode:ATR </b> => invia al server il codice ATR utilizzato per il login, se corrisponde al codice ATR della Smart Card inserita il login viene accettato, ed il codice ATR viene accettato e validato. Il server considererà valido il codice ATR validato in sede di autenticazione.
 
 Restituisce:
 
-un errore se la smart card non è inserita o il lettore non viene trovato,
+  - <<error string>>: se la smart card non è inserita o il lettore non viene trovato,
 
-Validated          => in caso di controllo di validazione positivo
+  - <b>Validated</b>:     => in caso di controllo di validazione positivo
 
-Notvalidated    => Il codice ATR della Smart Card inserita non corrisponde al codice ATR validato
+  - <b>Notvalidated</b>:  => Il codice ATR della Smart Card inserita non corrisponde al codice ATR validato
 
-AlreadyLogged => Autenticazione già eseguita precedentemente
+  - <b>AlreadyLogged</b>: => Autenticazione già eseguita precedentemente
 .........................................................................................................................................................................................................
 
 - <b>Checkcode:</b>=> verifica la presenza della Smart Card ed esegue il controllo di validazione.
