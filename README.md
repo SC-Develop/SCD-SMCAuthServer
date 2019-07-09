@@ -100,7 +100,7 @@ Now you can test the server by clicking the buttons on atr.html web page.
 The typical use is authentication on a remote server such as, for example, a WEB portal.
 First you need to read the ATR code to associate with your user.
 You can get the <b>ATR</b> code by using the <b>atr.html</b> page how explained above 
-Now you can associate the <b>ATR</ b> code with the username and password of your user in the authentication table of the users of your database server
+Now you can associate the <b>ATR</b> code with the username and password of your user in the authentication table of the users of your database server
 
 ```
  username : Tex
@@ -116,8 +116,9 @@ The typical authentication session is shown on the diagram below.
 
 The login web page should contain the <b>ATR</b> hidden field. This field will be automatic filled with the <b>ATR</b> code readed from smartcard.
 
-La pagina web di login invia al server smart card tramite uno script javascript il comando <b>"Logincode:"</b> , ed ottiene il codice ATR da impostare nel campo hidden.
-Il codice ATR viene inviato al server WEB per l'autenticazione. Se l'utente viene autenticato (il codice ATR corrisponde (match) con gli altri parametri di login, il codice viene reinviato indietro dal server web all'interno della pagina web (dentro una variabile javascript o un campo hidden, o come attributo di un tag etc.) che viene caricata se il login ha  avuto esito positivo,
+1) The login web page ask to the server the ATR code by sending the command <b>"Logincode:"</b>, and set the ATR hidden field    with the readed ATR code.
+
+2) When the user submits the login,  the <b>ATR</b> code is sent to web server togheter  username and passwor for the            authentication. If the authentication succeeded (the ATR code match username and password), the <b>ATR</b> code will be      sent backward into a javascript bariable for example inside the page that will load on login success..
 Al termine del caricamento della pagina web un script javascritp invia il comando <b>"Authcode:<ATR>"</b> al server di gestione della smartcard per la validazione: es. <b>"Authcode:3bff1800008131fe45006b05051017012101434e531031805e"</b> se il codice non è validato bisogna tornare alla pagina di login
 Ad intervalli temporizzati, bisogna eseguire il controllo di validazione inviando il comando <b>"Checkcode:"</b> in caso di fallimento tornare al login, nel caso in cui per più di n-secondi non viene rilevata la smartcard od il lettore si torna al login.
 Il controllo temporizzato non è necessario se si utilizza il browser proprietario, poichè se ne occupa il browser stesso.
