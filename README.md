@@ -92,13 +92,30 @@ $ git clone https://github.com/sc-develop/scd_smcauthserver
 Run Qt Creator, load the project file build and run the server.
 
 To test the Smart Card Autentication Server you can load the <b>atr.html</b> page on your browser. 
-Connect your smartcard  reader on USB connector of your PC/Laptop  and insert the smartcard into reader. 
+Connect your smartcard  reader to the USB connector of your PC/Laptop  and insert the smartcard into the reader. 
 Now you can test the server by clicking the buttons on atr.html web page.
 
 ## How to use the server for authentication
 
 The typical use is authentication on a remote server such as, for example, a WEB portal.
 First you need to read the ATR code to associate with your user.
+You can get the <b>ATR</b> code by using the <b>atr.html</b> page how explained above 
+Now you can associate the <b>ATR</ b> code with the username and password of your user in the authentication table of the users of your database server
+
+Users Authentication Table
+--------------------------------------------------------------
+username |
+--------------------------------------------------------------
+password |
+--------------------------------------------------------------
+ATR      | 3bff1800008131fe45006b05051017012101434e531031805e
+--------------------------------------------------------------
+
+The explanation of authentication on remote server by web page is beyond the scope of this document.
+
+Now you are ready to use the SCD Smart Card Authentication Server full services.
+
+The typical authentication session is shown on the diagram below.
 
 Si premette che la pagina web di login deve oltre i parametri quali username, password etc. deve contenere un ulteriore campo hidden che conterrà il codice ATR letto dalla Smart Card inserita nel lettore.
 
