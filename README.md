@@ -8,18 +8,22 @@ The authentication server can be work in two modality:
 - <b>standalone</b>
 - <b>embedded</b> on your application
 
-Can be used with a web browser if , on login, an additional level of security is required or as security key for upu own application.
-Also, this server can be used embedding it on your own application.
+Can be used with a web browser if , on login, an additional level of security is required, or as security key for your own application. Also, this server can be used embedding it on your own application.
 
-## How ro work
+## How to work
 
-When started, the server oepn the port 10552, and wait for web socket connection.
+When started, the server open the port 10552, and wait for web socket connection.
 
 You can connect to server by the onenction string: <b>"ws://localhost:10522"</b>.
 
 This version of server supports only the unsecure conenction.
 
-Il server accetta una serie di comandi per il rilevamento del codice carta, la gestione della transazione di autenticazione, e il controllo di congruenza/presenza della carta.
+The server accept commands for:
+
+- smart card ATR code reading
+- management of authentication, 
+- login consistency check
+- card detection
 
 Il server inoltre restituisce delle stringhe di errore nel caso in cui la carta non è inserita nel lettore, o se nessun lettore Smart Card viene rilevato dal server.
 
