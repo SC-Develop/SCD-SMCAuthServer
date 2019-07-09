@@ -24,7 +24,7 @@ The server accepts commands for:
 - login consistency check
 - card detection
 
-Il server inoltre restituisce delle stringhe di errore nel caso in cui la carta non è inserita nel lettore, o se nessun lettore Smart Card viene rilevato dal server.
+Also, the sever reply with an error string in case of the smart card is not detected  (is not inserted into reeader), or no readers is detected.
 
 ### Comandi Server:
 
