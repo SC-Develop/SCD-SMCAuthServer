@@ -50,11 +50,10 @@ Also, the sever reply with an error string in case of the smart card is not dete
     - <b>Notvalidated</b>  : the smart card <b>ATR</b> code do not match the <b>ATR</b> code validated
 
     - <b>AlreadyLogged</b> : not to need to autheticate: already logged in
-.........................................................................................................................................................................................................
 
 - <b>Checkcode:</b>=> verifica la presenza della Smart Card ed esegue il controllo di validazione.
 
-  Restituisce:
+  Return reply:
 
     - <b>error string</b>     : the smart card is not detected  (is not inserted into reeader), or no readers is detected.
 
@@ -64,8 +63,10 @@ Also, the sever reply with an error string in case of the smart card is not dete
 
     - <b>NotAuthenticated</b> : currently not authenticated: you need to log in.
     
-The validation check shuld be performad oly after the authentication and validation od<b> ATR </b>code.
-If you receive the  Il controllo di validazione infatti si deve esegure solo dopo la validazione del codice ATR, cioè solo dopo che laì'applicaqzione si è correttamente autenticata. infatti non ha senso eseguire il controllo di validazione se l'applicazione non ha eseguito il login.
+    - <b>SessionTimeout</b>   : you shuold to logout.
+    
+The validation check should be performad only after the authentication and validation of<b>ATR</b>code. It makes no sense to check the validations if you are not logged in.
+If not validated or authenticated is safely and strictly  recomended to logout from your application andif need,  again log in. If thea are an error you con wait until <b>SessionTimeout</b> is issued. 
 
 
 - <b>Servertype:</b>restituisce "Integrated", "Standalone"
