@@ -82,7 +82,7 @@ Also, the sever reply with an error string in case of the smart card is not dete
 
 <img src="diagram/Diagramma1.png" />
 
-## Come comunicare col server per eseguire la procedura di autenticazione validazione e controllo</u>
+## How to use the server for authentication
 
 Si premette che la pagina web di login deve oltre i parametri quali username, password etc. deve contenere un ulteriore campo hidden che conterrà il codice ATR letto dalla Smart Card inserita nel lettore.
 
