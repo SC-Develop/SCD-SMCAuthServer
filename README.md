@@ -118,8 +118,10 @@ The login web page should contain the <b>ATR</b> hidden field. This field will b
 
 1) The login web page ask to the server the ATR code by sending the command <b>"Logincode:"</b>, and set the ATR hidden field    with the readed ATR code.
 
-2) When the user submits the login,  the <b>ATR</b> code is sent to web server togheter  username and passwor for the            authentication. If the authentication succeeded (the ATR code match username and password), the <b>ATR</b> code will be      sent backward into a javascript bariable for example inside the page that will load on login success..
-Al termine del caricamento della pagina web un script javascritp invia il comando <b>"Authcode:<ATR>"</b> al server di gestione della smartcard per la validazione: es. <b>"Authcode:3bff1800008131fe45006b05051017012101434e531031805e"</b> se il codice non è validato bisogna tornare alla pagina di login
+2) When the user submits the login,  the <b>ATR</b> code is sent to web server togheter  username and passwor for the            authentication. 
+   If the authentication succeeded (the ATR code match username and password) the command <b>Authcode:<ATR></b> will be sent    to the smart card server to validate the ATR code. 
+   if your ATR code is <b>3bff1800008131fe45006b05051017012101434e531031805e</b> the command sent to the server will be          <b>"Authcode:3bff1800008131fe45006b05051017012101434e531031805e"</b>. 
+   If the validation fails you should to return to login page.
 Ad intervalli temporizzati, bisogna eseguire il controllo di validazione inviando il comando <b>"Checkcode:"</b> in caso di fallimento tornare al login, nel caso in cui per più di n-secondi non viene rilevata la smartcard od il lettore si torna al login.
 Il controllo temporizzato non è necessario se si utilizza il browser proprietario, poichè se ne occupa il browser stesso.
 
