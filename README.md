@@ -51,15 +51,17 @@ Also, the sever reply with an error string in case of the smart card is not dete
 
 - <b>Checkcode:</b>=> verifica la presenza della Smart Card ed esegue il controllo di validazione.
 
-Restituisce:
+  Restituisce:
 
-un errore se la smart card non è inserita o il lettore non viene trovato,
+    - <b>error string</b>     : the smart card is not detected  (is not inserted into reeader), or no readers is detected.
 
-Validated  => in caso di controllo con esito positivo
+    - <b>Validated</b>        : in caso di controllo con esito positivo
 
-Notvalidated => Il codice ATR della Smart Card inserita non corrisponde al codice ATR validato
+    - <b>Notvalidated</b>     : Il codice ATR della Smart Card inserita non corrisponde al codice ATR validato
 
-NotAuthenticated => il controllo di validazione può essere eseguito solo dopo l'autenticazione e la validazione del codice ATR. Se l'applicazione WEB, nonostante sia correttamente autenticata, riceve questa risposta deve subito tornare alla pagina di login perchè potrebbe esserci un tentativo di forzare il server. Il controllo di validazione infatti si deve esegure solo dopo la validazione del codice ATR, cioè solo dopo che laì'applicaqzione si è correttamente autenticata. infatti non ha senso eseguire il controllo di validazione se l'applicazione non ha eseguito il login.
+    - <b>NotAuthenticated</b> :
+    
+    il controllo di validazione può essere eseguito solo dopo l'autenticazione e la validazione del codice ATR. Se l'applicazione WEB, nonostante sia correttamente autenticata, riceve questa risposta deve subito tornare alla pagina di login perchè potrebbe esserci un tentativo di forzare il server. Il controllo di validazione infatti si deve esegure solo dopo la validazione del codice ATR, cioè solo dopo che laì'applicaqzione si è correttamente autenticata. infatti non ha senso eseguire il controllo di validazione se l'applicazione non ha eseguito il login.
 ..........................................................................................................................................................................................................
 
 - <b>Servertype:</b>restituisce "Integrated", "Standalone"
