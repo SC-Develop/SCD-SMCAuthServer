@@ -102,13 +102,9 @@ First you need to read the ATR code to associate with your user.
 You can get the <b>ATR</b> code by using the <b>atr.html</b> page how explained above 
 Now you can associate the <b>ATR</ b> code with the username and password of your user in the authentication table of the users of your database server
 
-### Users Authentication Table 
-___________________________________________________________________________
-| usename | password | atr                                                |
-___________________________________________________________________________
-| Tex     | Willer   | 3bff1800008131fe45006b05051017012101434e531031805e |
-___________________________________________________________________________
-
+ username : Tex
+ password : Willer
+ atr      : 3bff1800008131fe45006b05051017012101434e531031805e
 
 The explanation of authentication on remote server by web page is beyond the scope of this document.
 
@@ -116,7 +112,7 @@ Now you are ready to use the SCD Smart Card Authentication Server full services.
 
 The typical authentication session is shown on the diagram below.
 
-Si premette che la pagina web di login deve oltre i parametri quali username, password etc. deve contenere un ulteriore campo hidden che conterrà il codice ATR letto dalla Smart Card inserita nel lettore.
+The login web page should contain the <b>ATR</b> hidden field. This field will be automatic filled with the <b>ATR</b> code readed from smartcard.
 
 La pagina web di login invia al server smart card tramite uno script javascript il comando <b>"Logincode:"</b> , ed ottiene il codice ATR da impostare nel campo hidden.
 Il codice ATR viene inviato al server WEB per l'autenticazione. Se l'utente viene autenticato (il codice ATR corrisponde (match) con gli altri parametri di login, il codice viene reinviato indietro dal server web all'interno della pagina web (dentro una variabile javascript o un campo hidden, o come attributo di un tag etc.) che viene caricata se il login ha  avuto esito positivo,
