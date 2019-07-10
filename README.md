@@ -45,9 +45,9 @@ Also, the sever reply with an error string in case of the smart card is not dete
 
     - <b>error string</b>  : the smart card is not detected  (is not inserted into reeader), or no readers is detected.
 
-    - <b>Validated</b>     : validation success
+    - <b>Authenticated</b>     : validation success
 
-    - <b>Notvalidated</b>  : the smart card <b>ATR</b> code do not match the <b>ATR</b> code validated
+    - <b>NotAuthenticated</b>  : the smart card <b>ATR</b> code do not match the <b>ATR</b> code validated
 
     - <b>AlreadyLogged</b> : not to need to autheticate: already logged in
 
