@@ -103,8 +103,8 @@ You can get the <b>ATR</b> code by using the <b>atr.html</b> page how explained 
 Now you can associate the <b>ATR</b> code with the username and password of your user in the authentication table of the users of your database server
 
 ```
- username : Tex
- password : Willer
+ username : admin
+ password : admin
  atr      : 3aff1800009131ff56006b05041017012101324e531031915f
  ```
 
@@ -125,3 +125,7 @@ The login web page should contain the <b>ATR</b> hidden field. This field will b
    If the validation fails you should to return to login page.
   
 4) At temporized interval, or when nedeed, you may be check validation by sending to the server the command <b>"Checkcode:"</b> If validation fails, or if session expired you should login again.
+
+## Diagram of typical authentication session
+
+<img src="diagram/Diagram2.png" />
