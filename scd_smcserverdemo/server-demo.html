@@ -1,0 +1,57 @@
+<!doctype html> 
+
+<html> 
+    
+<head>
+    
+  <title> Smart Card Authentication Demo Web Socket Client</title> 
+  
+  <script src="scd_smcauthclient.js" ></script> 
+  
+  <script src="server-demo.html.js" ></script> 
+  
+</head>
+
+ <body onload="connect('')" style="font-family:sans-serif; margin:0px; background-color:#F0F0F0">
+      
+    <div style="background-color:#555555; color:#FFFFFF; margin:0px; padding:0.8em; padding-left:0.5em; border-radius:0px; border-bottom:1px solid #555555;">
+      
+      <h2 style="margin:0px; font-weight:normal;">SCD Smartcard Authentication Server - Demo</h2>   
+        
+    </div>        
+      
+    <div style="background-color:#888888; color:#FFFFFF; border-radius:0px;  padding:0.8em; padding-left:0.5em; margin:auto; margin-bottom:0em; border-bottom:1px solid #333333;">
+        
+      <button style="background-color: #555555; color:#FFFFFF; padding:0.5em; border-radius:3px; cursor:pointer; border:1px solid #333333;" type="button" onclick="client.getATR()"     >Get ATR Code     </button>     
+      <button style="background-color: #555555; color:#FFFFFF; padding:0.5em; border-radius:3px; cursor:pointer; border:1px solid #333333;" type="button" onclick="client.getServerType()">Check Server Type</button>
+      <button style="background-color: #555555; color:#FFFFFF; padding:0.5em; border-radius:3px; cursor:pointer; border:1px solid #333333;" type="button" onclick="client.getLoginCode()" >Get Login Code   </button>
+      <button style="background-color: #555555; color:#FFFFFF; padding:0.5em; border-radius:3px; cursor:pointer; border:1px solid #333333;" type="button" onclick="client.setAuthenticationCode(document.getElementById('atr').innerText)"    >Set Login Code   </button>
+      <button style="background-color: #555555; color:#FFFFFF; padding:0.5em; border-radius:3px; cursor:pointer; border:1px solid #333333;" type="button" onclick="client.checkAuthentication()"  >Check Login Code </button>
+      <span style="color:#00FF00;padding-left:0.5em;padding-right:0.25em">Polling timer</span>
+      <input style = "border-radius:3px; padding:0.3em; border:1px solid #333333; padding-left:0.25em; width:2em" id="timeout" value="1" />
+      <button style="background-color: #555555; color:#FFFFFF; padding:0.5em; border-radius:3px; cursor:pointer; border:1px solid #333333;" type="button" onclick="client.setPollTimeout(document.getElementById('timeout').value)">Set Timeout</button>     
+      
+    </div>          
+     
+    <div id="auth" style="background-color:#337ab7; color:#FFFFFF; margin:0px; margin-bottom:0em; padding:0.8em; border-radius:0px; border-bottom:1px solid #555555;">
+      <span>ATR: </span> 
+      <span style="padding-left:0.5em;" id="atr"></span>          
+    </div>        
+         
+    <ul style="background-color:#FAFAFA; margin:0.5em; padding-top:1em; border-radius:0px; border:1px solid #333333; height:13em; overflow-y:scroll;" id="eventi_websocket"></ul>  
+    
+    <div style="background-color:#337ab7; color:#FFFFFF; margin:0px; padding:0.25em; border-radius:0px; border-top:1px solid #555555;">
+      
+      <span>Server Connection:</span><span style="color:orange; font-weight:bold;" id="data"> Opening...</span><span style="padding-left:0.5em;">|</span><span style="padding-left:0.5em;">Web Socket Error:</span><span style="color:orange; font-weight:bold; padding-left:0.5em" id="error">No error</span>
+        
+    </div>      
+    
+    <div style="background-color:#555555; color:#FFFFFF; margin:0px; padding:0.25em; border-radius:0px; border-top:1px solid #555555;">
+      
+      Copyright (c) 2019 Ing. Salvatore Cerami (MIT) - dev.salvatore.cerami@gmail.com - https://github.com/SC-Develop/SCD_SMCAuthServer - git.sc.develop@gmail.com
+        
+    </div>      
+    
+  </body> 
+  
+</html>
