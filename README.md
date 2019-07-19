@@ -1,5 +1,5 @@
 # SCD_SMCAuthServer
-Smart Card Authentication Server
+Smart Card Authentication Server 
 
 ## Description
 
@@ -46,7 +46,7 @@ Also, the sever reply with an error string in case of the smart card is not dete
 
     - <b>error string</b>  : the smart card is not detected  (is not inserted into reeader), or no readers is detected.
 
-    - <b>Atr:<value></b>   : value is the value of ATR code
+    - <b>Atr:value</b>     : value is the value of ATR code
   
 - <b>Authcode:ATR </b>
 
@@ -88,9 +88,9 @@ Also, the sever reply with an error string in case of the smart card is not dete
     - <b>Integrated</b>
     - <b>Standalone</b>
     
-- <b>PollTimeout:<timeout></b> 
+- <b>PollTimeout:timeout</b> 
 
-  Set the server polling timeout, <timeout> is expressed in seconds. 
+  Set the server polling timeout, timeout is a numeric string value expressed in seconds. 
   If Server receive the command <b>LoginCode</b> or <b>CheckCode</b>, it starts a polling for the smartcard check.
   Every timeout seconds the server check the smartcard. If the status of reader or the smartcard is differet from last         checking, the server issues a new message to client. To stop the server polling set timeout to 0. 
   If timeout is set to zero, the server reply one time if riceve the command <b>LoginCode</b> or <b>CheckCode</b>. 
@@ -98,7 +98,7 @@ Also, the sever reply with an error string in case of the smart card is not dete
    
   Return reply:
   
-    - <b>Timeout:<seconds></b>
+    - <b>Timeout:seconds</b>
     
 ## Flow Diagram
 
@@ -111,6 +111,12 @@ Download the project typing on your linux terminal
 ```
 $ git clone https://github.com/sc-develop/scd_smcauthserver
 ```
+Before compile the server project, you must install on your linux system the PC/SC library.
+
+```
+$ sudo apt-get install libpcsclite1, libpcsclite1-dev
+```
+
 Run Qt Creator, load the project file build and run the server.
 
 To test the Smart Card Autentication Server you can load the <b>atr.html</b> page on your browser. 
