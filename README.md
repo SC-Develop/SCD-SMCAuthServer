@@ -36,7 +36,17 @@ Also, the sever reply with an error string in case of the smart card is not dete
   Require the <b>ATR</b> code: the server reply sending the <b>ATR</b> code readed from smart card.
   After sending this command, the validation controls will fails: you will need to log in again, authenticate and validate.
   See next command.
-  This command invalidate current session, and the message 'SessionExpired' will be anyway sent to client, also on error.  
+  This command anyway invalidate current session, and the message 'SessionExpired' will be anyway sent to client, also on       error.  
+  
+- <b>AtrCode</b>  
+
+  Require the <b>ATR</b> code. This command do not invalidate current session. 
+  
+  Return reply:
+
+    - <b>error string</b>  : the smart card is not detected  (is not inserted into reeader), or no readers is detected.
+
+    - <b>Atr:<value></b>   : value is the value of ATR code
   
 - <b>Authcode:ATR </b>
 
@@ -71,9 +81,21 @@ Also, the sever reply with an error string in case of the smart card is not dete
   The validation check should be performad only after the authentication and validation of<b>ATR</b>code. It makes no sense     to check the validations if you are not logged in.
   If not validated or authenticated is safely and strictly  recomended to logout from your application andif need,  again log   in. If thea are an error you con wait until <b>SessionExpired</b> is issued. 
 
-
 - <b>Servertype:</b> 
 
+  Return reply:
+  
+    - <b>Integrated</b>
+    - <b>Standalone</b>
+    
+- <b>PollTimeout:<timeout></b> 
+
+  Set the server polling timeout, <timeout> is expressed in seconds. 
+  If Server receive the command <b>LoginCode</b> or <b>CheckCode</b>, it starts a polling for the smartcard check.
+  Every timeout seconds the server check the smartcard. If the status of reader or the smartcard is differet from last         checking, the server issues a new message to client. To stop the server polling set timeout to 0. 
+  If timeout is set to zero, the server reply one time if riceve the command <b>LoginCode</b> or <b>CheckCode</b>. 
+  The other commands, in general, do not stop the polling: the server reply to immediate command, e return to previous         polling,status.
+   
   Return reply:
   
     - <b>Integrated</b>
