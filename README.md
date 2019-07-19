@@ -94,13 +94,12 @@ Also, the sever reply with an error string in case of the smart card is not dete
   If Server receive the command <b>LoginCode</b> or <b>CheckCode</b>, it starts a polling for the smartcard check.
   Every timeout seconds the server check the smartcard. If the status of reader or the smartcard is differet from last         checking, the server issues a new message to client. To stop the server polling set timeout to 0. 
   If timeout is set to zero, the server reply one time if riceve the command <b>LoginCode</b> or <b>CheckCode</b>. 
-  The other commands, in general, do not stop the polling: the server reply to immediate command, e return to previous         polling,status.
+  The other commands, in general, do not stop the polling: the server reply to immediate command, e return to previous         polling status.
    
   Return reply:
   
-    - <b>Integrated</b>
-    - <b>Standalone</b>
-
+    - <b>Timeout:<seconds></b>
+    
 ## Flow Diagram
 
 <img src="diagram/Diagramma1.png" />
