@@ -161,7 +161,7 @@ The login web page should contain the <b>ATR</b> hidden field. This field will b
    if your ATR code is <b>3aff1800009131ff56006b05041017012101324e531031915f</b> the command sent to the server will be          <b>"Authcode:3aff1800009131ff56006b05041017012101324e531031915f"</b>. 
    If the validation fails you should to return to login page.
   
-4) At temporized interval, or when nedeed, you may be check validation by sending to the server the command <b>"Checkcode:"</b> If validation fails, or if session expired you should login again.
+4) At timed intervals, or when needed, you may be check validation by sending to the server the command <b>"Checkcode:"</b> If validation fails, or if session expired you should login again.
 
 ## Diagram of typical authentication session
 
