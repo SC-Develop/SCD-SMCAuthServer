@@ -36,6 +36,7 @@ Also, the sever reply with an error string in case of the smart card is not dete
   Require the <b>ATR</b> code: the server reply sending the <b>ATR</b> code readed from smart card.
   After sending this command, the validation controls will fails: you will need to log in again, authenticate and validate.
   See next command.
+  This command invalidate current session, and the message 'SessionExpired' will be anyway sent to client, also on error.  
   
 - <b>Authcode:ATR </b>
 
@@ -65,10 +66,10 @@ Also, the sever reply with an error string in case of the smart card is not dete
 
     - <b>NotAuthenticated</b> : currently not authenticated: you should to log in.
     
-    - <b>SessionTimeout</b>   : you should to logout.
+    - <b>SessionExpired</b>   : you should to logout.
     
   The validation check should be performad only after the authentication and validation of<b>ATR</b>code. It makes no sense     to check the validations if you are not logged in.
-  If not validated or authenticated is safely and strictly  recomended to logout from your application andif need,  again log   in. If thea are an error you con wait until <b>SessionTimeout</b> is issued. 
+  If not validated or authenticated is safely and strictly  recomended to logout from your application andif need,  again log   in. If thea are an error you con wait until <b>SessionExpired</b> is issued. 
 
 
 - <b>Servertype:</b> 
@@ -94,6 +95,15 @@ Run Qt Creator, load the project file build and run the server.
 To test the Smart Card Autentication Server you can load the <b>atr.html</b> page on your browser. 
 Connect your smartcard  reader to the USB connector of your PC/Laptop  and insert the smartcard into the reader. 
 Now you can test the server by clicking the buttons on atr.html web page.
+You can change the server port value editing the config.cfg file created automatically when the serve starts first time.
+```
+~/scd_smcauthserver/bin$ sudo nano config.cfg
+```
+```
+[general]
+port=10522
+```
+Save the config.cfg file and the restart the server.
 
 ## How to use the server for authentication and validation checking
 
