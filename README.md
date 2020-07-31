@@ -13,7 +13,7 @@ The authentication server can be work in two modality:
 
 Can be used with a web browser if , on login, an additional level of security is required, or as security key for your own application. Also, this server can be used embedding it on your own application.
 
-## How to work
+## How it works
 
 When started, the server open the port 10552, and wait for web socket connection.
 Web socket client can connects to the server by the connection string: <b>"ws://localhost:10522"</b>.
