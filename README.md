@@ -100,11 +100,11 @@ Also, the sever reply with an error string in case of the smart card is not dete
   
     - <b>Timeout:seconds</b>
     
-## Flow Diagram
+## Diagram Flow
 
 <img src="diagram/Diagramma1.png" />
 
-## Test the Server
+## How to test the server
 
 Download the project typing on your linux terminal
 
