@@ -1,4 +1,4 @@
-# SCD_SMCAuthServer
+# SCD-SMCAuthServer
 Smart Card Authentication Server (Qt/C++)
 
 ## Description
